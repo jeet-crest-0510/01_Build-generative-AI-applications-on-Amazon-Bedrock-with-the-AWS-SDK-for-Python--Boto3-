@@ -1,6 +1,8 @@
 # Blog Description
 [Build Generative AI Applications on Amazon Bedrock with the AWS SDK for Python (Boto3)](https://aws.amazon.com/blogs/machine-learning/build-generative-ai-applications-on-amazon-bedrock-with-the-aws-sdk-for-python-boto3/)
 
+![Solution](solution.png)
+
 # Requirements
 ### Prerequisites for Using Amazon Bedrock with Boto3
 
