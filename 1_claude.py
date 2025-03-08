@@ -11,7 +11,7 @@ bedrock_client = boto3.client(
 model_id = "anthropic.claude-3-sonnet-20240229-v1:0"
 
 # Prepare the input prompt
-prompt = "Hello, how are you?"
+prompt = "Hello, What is amazon bedrock?"
 
 # Create the request payload
 payload = {

@@ -51,36 +51,53 @@ def main():
         region_name="us-east-1"
     )
 
-    # Define the models and prompts
+    # Take user input for the prompt
+    user_prompt = input("Enter your prompt: ")
+    
     models = ["amazon.nova-lite-v1:0", "anthropic.claude-3-sonnet-20240229-v1:0"]
-    prompts = [
-        "Hello, What is Amazon Bedrock?",
-        "What are the key differences between classical physics and quantum physics?",
-        "If a farmer has 20 chickens and he buys 15 more, but 5 escape, how many chickens does he have left? Explain your reasoning.",
-        "Explain how blockchain technology ensures security and decentralization in cryptocurrencies.",
-        "Do you think artificial intelligence will ever surpass human intelligence? Why or why not?"
-    ]
-
+    
     results = {}
-    for prompt in prompts:
-        print(f"Prompt: {prompt}\n")
-        for model_id in models:
-            response_text, response_latency = invoke_bedrock_model(bedrock_client, model_id, prompt)
-            results[(model_id, prompt)] = {
-                "response": response_text,
-                "latency": response_latency
-            }
-            print(f"Model: {model_id}")
-            print(f"Response: {response_text}")
-            print(f"Latency: {response_latency:.4f} seconds\n")
+    print("\nProcessing your prompt...\n")
+    for model_id in models:
+        response_text, response_latency = invoke_bedrock_model(bedrock_client, model_id, user_prompt)
+        results[model_id] = {
+            "response": response_text,
+            "latency": response_latency
+        }
+        print(f"Model: {model_id}")
+        print(f"Response: {response_text}")
+        print(f"Latency: {response_latency:.4f} seconds\n")
         print("-" * 80)
 
 if __name__ == "__main__":
     main()
 
 
-# Output
+# Define the models and prompts
+    # models = ["amazon.nova-lite-v1:0", "anthropic.claude-3-sonnet-20240229-v1:0"]
+    # prompts = [
+    #     "Hello, What is Amazon Bedrock?",
+    #     "What are the key differences between classical physics and quantum physics?",
+    #     "If a farmer has 20 chickens and he buys 15 more, but 5 escape, how many chickens does he have left? Explain your reasoning.",
+    #     "Explain how blockchain technology ensures security and decentralization in cryptocurrencies.",
+    #     "Do you think artificial intelligence will ever surpass human intelligence? Why or why not?"
+    # ]
 
+    # results = {}
+    # for prompt in prompts:
+    #     print(f"Prompt: {prompt}\n")
+    #     for model_id in models:
+    #         response_text, response_latency = invoke_bedrock_model(bedrock_client, model_id, prompt)
+    #         results[(model_id, prompt)] = {
+    #             "response": response_text,
+    #             "latency": response_latency
+    #         }
+    #         print(f"Model: {model_id}")
+    #         print(f"Response: {response_text}")
+    #         print(f"Latency: {response_latency:.4f} seconds\n")
+    #     print("-" * 80)
+
+# Output
 # Prompt: Hello, What is Amazon Bedrock?
 
 # Model: amazon.nova-lite-v1:0

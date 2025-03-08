@@ -12,18 +12,22 @@
 - The **IAM user access key and secret key** to configure the AWS CLI and permissions.  
   - Configure using:  
     ```sh
-    aws --configure
+    aws configure
     ```
 - **Access to Foundation Models (FMs)** on Amazon Bedrock.
 - The **latest Boto3 library** installed.
+  - Installing boto3
+    ```bash
+    pip install boto3
+    ```
 - **Python version 3.8 or later** configured with your integrated development environment (IDE).
 
-# Steps/Actions
+# Execution
 
-## Creat a python file
-create  python file named main.py or any other name
+## Create a python file
+create a python file (i.e. main.py)
 
-## Creating virtual environment in python
+## Creating virtual environment in python (Optional)
 
 Use virtual environment to maintain packages across different projects
 
@@ -35,14 +39,6 @@ Activate virtual Enviroment
 
 ```bash
 venv\Script\activate
-```
-
-## Installation of Boto3
-
-Installing boto3 on our virtual environment
-
-```bash
-pip install boto3
 ```
 
 ## Code
@@ -174,3 +170,14 @@ deployment of generative AI models. Here are some key features and functionaliti
 Overall, Amazon Bedrock aims to simplify the process of adopting generative AI by providing a robust platform for model development, customization, and deployment.
 "
 ```
+
+# Comparision of Models
+
+| Feature              | Claude 3 Sonnet | Amazon Nova Lite |
+|----------------------|----------------|------------------|
+| **Detailed Explanations** | ✅ Excellent | ❌ Basic |
+| **Factual Accuracy** | ✅ High | ✅ High |
+| **Response Speed** | ❌ Slightly slower | ✅ Faster |
+| **Creative Thinking** | ✅ Strong | ❌ Weak |
+| **Handling Complex Queries** | ✅ Advanced reasoning | ❌ Limited |
+| **Best for** | AI, philosophy, detailed explanations, deep analysis | Quick, factual responses, structured knowledge |
