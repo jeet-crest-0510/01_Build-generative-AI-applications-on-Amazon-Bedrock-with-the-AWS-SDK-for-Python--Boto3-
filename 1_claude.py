@@ -11,12 +11,12 @@ bedrock_client = boto3.client(
 model_id = "anthropic.claude-3-sonnet-20240229-v1:0"
 
 # Prepare the input prompt
-prompt = "Hello, What is amazon bedrock?"
+prompt = "Hello, What is Generative AI?"
 
 # Create the request payload
 payload = {
     "anthropic_version": "bedrock-2023-05-31",
-    "max_tokens": 2048,
+    "max_tokens": 500,
     "temperature": 0.9,
     "top_k": 250,
     "top_p": 1,

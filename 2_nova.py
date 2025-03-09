@@ -11,14 +11,14 @@ bedrock_client = boto3.client(
 model_id = "amazon.nova-lite-v1:0"
 
 # Prepare the input prompt
-prompt = "Hello, What is amazon bedrock?"
+prompt = "Do you think artificial intelligence will ever surpass human intelligence? Why or why not?"
 
 # Invoke the Amazon Bedrock model
 response = bedrock_client.invoke_model(
     modelId=model_id,
     body=json.dumps({
     "inferenceConfig": {
-      "max_new_tokens": 1000
+      "max_new_tokens": 500
     },
     "messages": [
       {
